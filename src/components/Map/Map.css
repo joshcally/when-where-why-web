@@ -1,5 +1,25 @@
-#FR {
+.perfect {
+  fill: green;
+}
+
+.warm {
   fill: yellow;
+}
+
+.off {
+  fill: orange;
+}
+
+.hot {
+  fill: red;
+}
+
+.chilly {
+  fill: #40e0d0;
+}
+
+.cold {
+  fill: #ADD8E6;
 }
 
 .map-wrapper {

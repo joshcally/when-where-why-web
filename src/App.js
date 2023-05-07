@@ -1,23 +1,66 @@
-import logo from './logo.svg';
+import React, { useState } from "react";
 import './App.css';
+import Map from "./components/Map/Map.js";
+import useCountries from "./hooks/useCountries";
 
 function App() {
+
+const [month, setMonth] = useState('JUN');
+const [region, setRegion] = useState('EUROPE');
+const [focusCountry, setFocusCountry] = useState('IT');
+const { loading, results: countries } = useCountries(region, month);
+
+const handleRegionChange = (region) => {
+  setRegion(region)
+};
+
+const handleMonthChange = (month) => {
+  setMonth(month)
+};
+
+const handleFocusCountryChange = (country) => {
+  setFocusCountry(country)
+};
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <button className="button" onClick={ () => handleRegionChange('EUROPE') }>Europe</button>
+      <button className="button" onClick={ () => handleRegionChange('NORTH_AMERICA') }>North America</button>
+      <button className="button" onClick={ () => handleRegionChange('SOUTH_AMERICA') }>South America</button>
+      <button className="button" onClick={ () => handleRegionChange('ASIA') }>Asia</button>
+      <button className="button" onClick={ () => handleRegionChange('AFRICA') }>Africa</button>
+
+      <div className="card">
+        <h1>{focusCountry} in {month}</h1>
+        {countries[focusCountry] && <p>{countries[focusCountry].description}</p>}
+      </div>
+
+      <div className="legend">
+         <ul>
+           <li class="red">Too Hot</li>
+           <li class="yellow">Warm</li>
+           <li class="green">Great Weather</li>
+           <li class="turquoise">Chilly</li>
+           <li class="blue">Too Cold</li>
+         </ul>
+      </div>
+
+      <Map countries={countries} region={region} onCountryHover={handleFocusCountryChange}/>
+
+      <button className="button" onClick={ () => handleMonthChange('JAN') }>Jan</button>
+      <button className="button" onClick={ () => handleMonthChange('FEB') }>Feb</button>
+      <button className="button" onClick={ () => handleMonthChange('MAR') }>Mar</button>
+      <button className="button" onClick={ () => handleMonthChange('APR') }>Apr</button>
+      <button className="button" onClick={ () => handleMonthChange('MAY') }>May</button>
+      <button className="button" onClick={ () => handleMonthChange('JUN') }>Jun</button>
+      <button className="button" onClick={ () => handleMonthChange('JUL') }>Jul</button>
+      <button className="button" onClick={ () => handleMonthChange('AUG') }>Aug</button>
+      <button className="button" onClick={ () => handleMonthChange('SEP') }>Sep</button>
+      <button className="button" onClick={ () => handleMonthChange('OCT') }>Oct</button>
+      <button className="button" onClick={ () => handleMonthChange('NOV') }>Nov</button>
+      <button className="button" onClick={ () => handleMonthChange('DEC') }>Dec</button>
+
     </div>
   );
 }
