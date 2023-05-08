@@ -19,6 +19,8 @@ const handleMonthChange = (month) => {
 };
 
 const handleFocusCountryChange = (country) => {
+  console.log('Hover over ' + country);
+  console.log(countries[focusCountry])
   setFocusCountry(country)
 };
 
@@ -32,17 +34,18 @@ const handleFocusCountryChange = (country) => {
       <button className="button" onClick={ () => handleRegionChange('AFRICA') }>Africa</button>
 
       <div className="card">
-        <h1>{focusCountry} in {month}</h1>
+        {countries[focusCountry] && <h1>{countries[focusCountry].name} in {month}</h1>}
+        {countries[focusCountry] && <p>{countries[focusCountry].summary}</p>}
         {countries[focusCountry] && <p>{countries[focusCountry].description}</p>}
       </div>
 
       <div className="legend">
          <ul>
-           <li class="red">Too Hot</li>
+           <li class="red">Scorching Hot</li>
            <li class="yellow">Warm</li>
-           <li class="green">Great Weather</li>
-           <li class="turquoise">Chilly</li>
-           <li class="blue">Too Cold</li>
+           <li class="green">Pleasant</li>
+           <li class="turquoise">Cool</li>
+           <li class="blue">Freezing Cold</li>
          </ul>
       </div>
 

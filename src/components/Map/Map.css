@@ -1,4 +1,4 @@
-.perfect {
+.mild {
   fill: green;
 }
 
@@ -6,15 +6,15 @@
   fill: yellow;
 }
 
-.off {
-  fill: orange;
+.no-data {
+  fill: grey;
 }
 
 .hot {
   fill: red;
 }
 
-.chilly {
+.cool {
   fill: #40e0d0;
 }
 

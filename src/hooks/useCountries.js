@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Papa from "papaparse"
 
 export default function useCountries(region, month) {
   const [results, setResults] = useState([]);
@@ -7,12 +8,20 @@ export default function useCountries(region, month) {
   useEffect(() => {
 
       try {
+
         setLoading(true);
 
-        var countries = fetchAndCacheCountries(region, month);
+        let filepath = 'assets/' + month.toLowerCase() + '.csv'
+        Papa.parse(filepath, {
+          download: true,
+          header: true,
+          complete: result => {
+            let dictionary = Object.fromEntries(result.data.map(x => [x.code, { 'name': x.name, 'temperature': x.temperature, 'precipitation': x.precipitation, 'summary': x.summary, 'description': x.description }]));
+            setResults(dictionary);
+            setLoading(false);
+          }
+        });
 
-          setResults(countries);
-          setLoading(false);
 
       } catch (err) {
         console.warn(err);
