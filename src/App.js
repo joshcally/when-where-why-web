@@ -19,8 +19,6 @@ const handleMonthChange = (month) => {
 };
 
 const handleFocusCountryChange = (country) => {
-  console.log('Hover over ' + country);
-  console.log(countries[focusCountry])
   setFocusCountry(country)
 };
 
