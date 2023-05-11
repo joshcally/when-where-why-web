@@ -1,9 +1,9 @@
 .mild {
-  fill: green;
+  fill: #53c319;
 }
 
 .warm {
-  fill: yellow;
+  fill: #fcba03;
 }
 
 .no-data {
@@ -11,15 +11,15 @@
 }
 
 .hot {
-  fill: red;
+  fill: #cf4226;
 }
 
 .cool {
-  fill: #40e0d0;
+  fill: #3fc0a9;
 }
 
 .cold {
-  fill: #ADD8E6;
+  fill: #2d89d6;
 }
 
 .map-wrapper {

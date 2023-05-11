@@ -32,7 +32,7 @@ const handleFocusCountryChange = (country) => {
       <button className="button" onClick={ () => handleRegionChange('AFRICA') }>Africa</button>
 
       <div className="card">
-        {countries[focusCountry] && <h1>{countries[focusCountry].name} in {month}</h1>}
+        {countries[focusCountry] && <h1>{countries[focusCountry].name} in {getFullMonthName(month)}</h1>}
         {countries[focusCountry] && <p>{countries[focusCountry].summary}</p>}
         {countries[focusCountry] && <p>{countries[focusCountry].description}</p>}
       </div>
@@ -64,6 +64,37 @@ const handleFocusCountryChange = (country) => {
 
     </div>
   );
+}
+
+function getFullMonthName(abbreviation) {
+  switch (abbreviation) {
+    case 'JAN' :
+      return 'January'
+    case 'FEB' :
+      return 'February'
+    case 'MAR' :
+      return 'March'
+    case 'APR' :
+      return 'April'
+    case 'MAY' :
+      return 'May'
+    case 'JUN' :
+      return 'June'
+    case 'JUL' :
+      return 'July'
+    case 'AUG' :
+      return 'August'
+    case 'SEP' :
+      return 'September'
+    case 'OCT' :
+      return 'October'
+    case 'NOV' :
+      return 'November'
+    case 'DEC' :
+      return 'December'
+    default:
+      return 'no-data'
+  }
 }
 
 export default App;
