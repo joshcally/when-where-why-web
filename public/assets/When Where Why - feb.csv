@@ -19,7 +19,7 @@ Bahrain,BHR,,,,
 Bangladesh,BGD,,,,
 Barbados,BRB,,,,
 Belarus,BLR,,,,
-Belgium,BEL,,,,
+Belgium,BEL,COLD,,,
 Belize,BLZ,,,,
 Benin,BEN,,,,
 Bermuda,BMU,,,,
@@ -52,7 +52,7 @@ Cook Islands,COK,,,,
 Costa Rica,CRI,,,,
 Croatia,HRV,COLD,SNOW,,"Enjoy scenic snowy hikes in continental Croatia but still be mindful on the roads. Bura (cold northeasterly) winds blow along the Adriatic, ferries run infrequently and many hotels in coastal towns shut down."
 Cuba,CUB,,,,
-Cyprus,CYP,,,,
+Cyprus,CYP,MILD,,,"The weather is mild, so good for cycling and hiking the trails (although it can be wet). It's also fiesta time with the high-octane annual carnival."
 Czech Republic,CZE,COLD,SNOW,,"The frost can be cruel in February, with temperatures below -10°C, so wrap up well. But the Czech countryside looks beautiful in the snow."
 Denmark,DNK,COLD,SNOW,,"Midwinter in Denmark can be scenic under snow and in sunshine, but more likely grey and gloomy, with a few events to brighten the mood. A midterm school holiday sees many locals head north to ski."
 Djibouti,DJI,,,,
@@ -92,8 +92,8 @@ Guyana,GUY,,,,
 Haiti,HTI,,,,
 Honduras,HND,,,,
 Hong Kong,HKG,,,,
-Hungary,HUN,,,,
-Iceland,ISL,,,,
+Hungary,HUN,COLD,,,By February winter has hung on a bit too long and the cold days are shorter and bleaker. Many attractions will remain closed (or keep shortened hours) until mid-March.
+Iceland,ISL,COLD,,,"The coldest month in many parts of Iceland, though everyday life in the capital can seem untouched. The countryside may be scenic under snow, but it's mostly dark - there are only seven to eight hours of daylight per dav."
 India,IND,,,,
 Indonesia,IDN,,,,
 Iran,IRN,,,,
@@ -120,7 +120,7 @@ Liberia,LBR,,,,
 Libya,LBY,,,,
 Liechtenstein,LIE,,,,
 Lithuania,LTU,COLD,,,"The cold, dark and icy winter continues, but locals make the most of it as they flock to the countryside for some cross-country skiing."
-Luxembourg,LUX,,,,
+Luxembourg,LUX,COLD,,,
 Macao,MAC,,,,
 Macedonia,MKD,,,,
 Madagascar,MDG,,,,

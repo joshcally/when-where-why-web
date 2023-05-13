@@ -19,7 +19,7 @@ Bahrain,BHR,,,,
 Bangladesh,BGD,,,,
 Barbados,BRB,,,,
 Belarus,BLR,,,,
-Belgium,BEL,,,,
+Belgium,BEL,MILD,,,"A great travelling month with long, long days and mild weather."
 Belize,BLZ,,,,
 Benin,BEN,,,,
 Bermuda,BMU,,,,
@@ -52,7 +52,7 @@ Cook Islands,COK,,,,
 Costa Rica,CRI,,,,
 Croatia,HRV,MILD,,,"It's sunny and warm on the coast, and you can take a dip in the sea. Hotels are cheaper, too, and crowds have yet to come. Cafe life in Zagreb and Split kicks into full gear."
 Cuba,CUB,,,,
-Cyprus,CYP,,,,
+Cyprus,CYP,MILD,,,"A great month to visit, with plenty of towel space on the sand, an average temperature of 26°C and warmer evenings for dining alfresco."
 Czech Republic,CZE,MILD,,,"Book accommodation well in advance, and expect to pay top dollar."
 Denmark,DNK,MILD,,,"The sun comes out on a semi-permanent basis, more warm-weather attractions open, and the events calendar starts filling as Danes throw off winter's gloom. Tourists have yet to arrive in great numbers."
 Djibouti,DJI,,,,
@@ -92,8 +92,8 @@ Guyana,GUY,,,,
 Haiti,HTI,,,,
 Honduras,HND,,,,
 Hong Kong,HKG,,,,
-Hungary,HUN,,,,
-Iceland,ISL,,,,
+Hungary,HUN,MILD,,,"The selection of fresh vegetables and fruit is not great in winter, but in spring a cycle of bounty begins, starting with asparagus."
+Iceland,ISL,COOL,,,"May is shoulder season, and isn't a bad month to visit, just before the tourist season cranks up in earnest. Enjoy prices before they escalate, plus lengthening days, spring wildflowers and first-rate birdwatching."
 India,IND,,,,
 Indonesia,IDN,,,,
 Iran,IRN,,,,
@@ -120,7 +120,7 @@ Liberia,LBR,,,,
 Libya,LBY,,,,
 Liechtenstein,LIE,,,,
 Lithuania,LTU,COOL,,,The days are noticeably longer now as weather conditions dramatically improve. Tourist-focused businesses start revving their engines; excitement fills the air in anticipation of a fruitful summer.
-Luxembourg,LUX,,,,
+Luxembourg,LUX,MILD,,,
 Macao,MAC,,,,
 Macedonia,MKD,,,,
 Madagascar,MDG,,,,

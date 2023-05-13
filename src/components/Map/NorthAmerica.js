@@ -1,4 +1,4 @@
-import './Map.css';
+import './WideMap.css';
 
 function NorthAmerica({ countries, onCountryHover }) {
 const setCountryHover = country => onCountryHover(country);

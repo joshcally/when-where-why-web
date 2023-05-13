@@ -19,7 +19,7 @@ Bahrain,BHR,,,,
 Bangladesh,BGD,,,,
 Barbados,BRB,,,,
 Belarus,BLR,,,,
-Belgium,BEL,,,,
+Belgium,BEL,COLD,,,"Days are short, cold and often grey but snow might lay just long enough for an Ardennes ski weekend."
 Belize,BLZ,,,,
 Benin,BEN,,,,
 Bermuda,BMU,,,,
@@ -52,7 +52,7 @@ Cook Islands,COK,,,,
 Costa Rica,CRI,,,,
 Croatia,HRV,COLD,SNOW,,"As the country goes back to work after the holidays, snow makes inland roads difficult to tackle, while strong winds on the coast and islands limit the ferry schedule."
 Cuba,CUB,,,,
-Cyprus,CYP,,,,
+Cyprus,CYP,MILD,,,"Weather-wise January is generally mild, but the Troödos Mountains can be snow-capped so remember to pack your skis. Tourism is down and some resort-based restaurants and hotels are closed."
 Czech Republic,CZE,COLD,SNOW,,"Days are short - the sun sets around 4.30pm in mid-January - but post-New Year accommodation prices are the cheapest you'll find, ideal for that romantic getaway in a cosy hotel with an open fireplace."
 Denmark,DNK,COLD,SNOW,,
 Djibouti,DJI,,,,
@@ -92,8 +92,8 @@ Guyana,GUY,,,,
 Haiti,HTI,,,,
 Honduras,HND,,,,
 Hong Kong,HKG,,,,
-Hungary,HUN,,,,
-Iceland,ISL,,,,
+Hungary,HUN,COLD,,,Hungary is still festive after the Christmas holidays. It's cold but the skies are bright blue. There may be a light dusting of snow on church spires and possibly ice floes in the Danube and Tisza.
+Iceland,ISL,COLD,,,"After December's cheer, the festive hangover hits. The first few weeks of the year can feel like an anticlimax - not helped by long dark nights and inclement weather."
 India,IND,,,,
 Indonesia,IDN,,,,
 Iran,IRN,,,,
@@ -120,7 +120,7 @@ Liberia,LBR,,,,
 Libya,LBY,,,,
 Liechtenstein,LIE,,,,
 Lithuania,LTU,COLD,,,New Year's celebrations and continued festive cheer warm the hearts of locals as they weather the limited daylight of what already feels like an endless winter.
-Luxembourg,LUX,,,,
+Luxembourg,LUX,COLD,,,
 Macao,MAC,,,,
 Macedonia,MKD,,,,
 Madagascar,MDG,,,,

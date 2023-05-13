@@ -19,7 +19,7 @@ Bahrain,BHR,,,,
 Bangladesh,BGD,,,,
 Barbados,BRB,,,,
 Belarus,BLR,,,,
-Belgium,BEL,,,,
+Belgium,BEL,MILD,,,"A great travelling month with long, long days and mild weather."
 Belize,BLZ,,,,
 Benin,BEN,,,,
 Bermuda,BMU,,,,
@@ -52,7 +52,7 @@ Cook Islands,COK,,,,
 Costa Rica,CRI,,,,
 Croatia,HRV,MILD,,,"Swim in the Adriatic, take in festivals across the country and enjoy outdoor activities galore. Ferries start their summer schedule, peak-season prices haven't quite kicked in and hotels are still not packed."
 Cuba,CUB,,,,
-Cyprus,CYP,,,,
+Cyprus,CYP,MILD,,,The weather is a delight with an average of 11 hours of sunshine daily. Book accommodation well ahead: it's the start of serious summer holidays.
 Czech Republic,CZE,MILD,,,"Something of a shoulder season, June promises great weather for beer gardens and river cruises without the May festival crowds or the hordes of student backpackers who arrive in Prague and Cesky Krumlov in July and August."
 Denmark,DNK,MILD,,,"Hello summer! Denmark's festival pace quickens alongside a rising temperature gauge and longer daylight hours. The main tourist season begins in earnest in late June, when schools break for a seven-week vacation."
 Djibouti,DJI,,,,
@@ -92,8 +92,8 @@ Guyana,GUY,,,,
 Haiti,HTI,,,,
 Honduras,HND,,,,
 Hong Kong,HKG,,,,
-Hungary,HUN,,,,
-Iceland,ISL,,,,
+Hungary,HUN,MILD,RAIN,,"Late spring is wonderful but the month of June can be pretty wet, especially early in the month. Beware the start of the holiday crowds."
+Iceland,ISL,MILD,,,"Hello summer! The short, sharp, three-month-long tourist season begins. Pros: the best weather, near-endless daylight, the pick of tours and excursions, the best choice of accommodation. Cons: big crowds, peak prices, the need to book all lodging."
 India,IND,,,,
 Indonesia,IDN,,,,
 Iran,IRN,,,,
@@ -120,7 +120,7 @@ Liberia,LBR,,,,
 Libya,LBY,,,,
 Liechtenstein,LIE,,,,
 Lithuania,LTU,MILD,,,"After several fits and bursts of spring sun, the warm weather is finally here to stay. The region-wide Midsummer's Eve festivities herald the peak of the summer season."
-Luxembourg,LUX,,,,
+Luxembourg,LUX,MILD,,,
 Macao,MAC,,,,
 Macedonia,MKD,,,,
 Madagascar,MDG,,,,

@@ -1,11 +1,11 @@
-import './Map.css';
+import './WideMap.css';
 import Africa from './Africa.js'
 import Asia from './Asia.js'
 import Europe from './Europe.js'
 import NorthAmerica from './NorthAmerica.js'
 import SouthAmerica from './SouthAmerica.js'
 
-function Map({ countries, region, onCountryHover }) {
+function WideMap({ countries, region, onCountryHover }) {
 
   return (
     <div className="map-wrapper">
@@ -18,4 +18,4 @@ function Map({ countries, region, onCountryHover }) {
   );
 }
 
-export default Map;
+export default WideMap;
