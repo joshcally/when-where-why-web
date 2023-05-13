@@ -19,7 +19,7 @@
   background-color: #000000;
 }
 
-.card{
+.card {
   display: inline-block;
   z-index: 1;
   border: 1px solid #eee;
@@ -29,7 +29,13 @@
   height: 200px;
 }
 
-.legend{
+.card-title {
+  font-size: 2em;
+  font-weight: bold;
+  padding-top: 5px;
+}
+
+.legend {
   display: inline-block;
   position: absolute;
   top: 0;

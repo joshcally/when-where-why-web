@@ -32,8 +32,8 @@ const handleFocusCountryChange = (country) => {
       <button className={`button ${region === 'SOUTH_AMERICA' ? "button-pressed" : ""}`} onClick={ () => handleRegionChange('SOUTH_AMERICA') }>South America</button>
 
       <div className="card">
-        {(focusCountry === 'NOT_SET') && <h1>Select a region</h1>}
-        {countries[focusCountry] && <h1>{countries[focusCountry].name} in {getFullMonthName(month)}</h1>}
+        {(focusCountry === 'NOT_SET') && <div className="card-title">Select a region</div>}
+        {countries[focusCountry] && <div className="card-title">{countries[focusCountry].name} in {getFullMonthName(month)}</div>}
         {countries[focusCountry] && <p>{countries[focusCountry].description}</p>}
       </div>
 

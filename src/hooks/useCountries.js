@@ -11,7 +11,7 @@ export default function useCountries(region, month) {
 
         setLoading(true);
 
-        let filepath = encodeURI('assets/' + month.toLowerCase() + '.csv');
+        let filepath = encodeURI(process.env.PUBLIC_URL + 'assets/' + month.toLowerCase() + '.csv');
         Papa.parse(filepath, {
           download: true,
           header: true,
