@@ -2,9 +2,9 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(csv)$/,
-                type: "asset/resource"
-            }
+              test: /\.(csv|tsv)$/i,
+              use: ['csv-loader'],
+            },
         ]
     }
 };
