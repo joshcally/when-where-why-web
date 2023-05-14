@@ -27,10 +27,13 @@ export default function useCountries(region, month) {
 //        let filepath = encodeURI('assets/' + month.toLowerCase() + '.csv');
 
         let filepath = encodeURI(getCountryCsv(month));
+        console.log("Current directory:", __dirname);
+        console.log('Filepath: ' + filepath);
         Papa.parse(filepath, {
           download: true,
           header: true,
           complete: result => {
+            console.log('GOT HERE');
             let dictionary = Object.fromEntries(result.data.map(x => [x.code, { 'name': x.name, 'temperature': x.temperature, 'precipitation': x.precipitation, 'summary': x.summary, 'description': x.description }]));
             setResults(dictionary);
             setLoading(false);
