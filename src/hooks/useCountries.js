@@ -27,6 +27,7 @@ export default function useCountries(region, month) {
 //        let filepath = encodeURI('assets/' + month.toLowerCase() + '.csv');
 
         let filepath = encodeURI(getCountryCsv(month));
+
         console.log("Current directory:", __dirname);
         console.log('Filepath: ' + filepath);
         Papa.parse(filepath, {
@@ -35,6 +36,8 @@ export default function useCountries(region, month) {
           complete: result => {
             console.log('GOT HERE');
             let dictionary = Object.fromEntries(result.data.map(x => [x.code, { 'name': x.name, 'temperature': x.temperature, 'precipitation': x.precipitation, 'summary': x.summary, 'description': x.description }]));
+            console.log('result' + JSON.stringify(result));
+            console.log('dictionary' + JSON.stringify(dictionary));
             setResults(dictionary);
             setLoading(false);
           }
