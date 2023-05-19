@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import './App.css';
-import SmallMap from "./components/Map/SmallMap.js";
-import WideMap from "./components/Map/WideMap.js";
-import useCountries from "./hooks/useCountries";
+import './Home.css';
+import SmallMap from "../map/SmallMap.js";
+import WideMap from "../map/WideMap.js";
+import useCountries from "../../hooks/useCountries";
 import MediaQuery from 'react-responsive'
 
-function App() {
+function Home() {
 
 const [month, setMonth] = useState('JUN');
 const [region, setRegion] = useState('EUROPE');
@@ -104,4 +104,4 @@ function getFullMonthName(abbreviation) {
   }
 }
 
-export default App;
+export default Home;

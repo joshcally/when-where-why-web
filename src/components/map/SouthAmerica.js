@@ -28,7 +28,7 @@ const setCountryHover = country => onCountryHover(country);
 }
 
 function getColorType(countries, id) {
-  if (typeof(countries) !== undefined && typeof(countries[id]) !== undefined && JSON.stringify(countries) !== '[]') {
+  if (typeof(countries) !== 'undefined' && typeof(countries[id]) !== 'undefined' && JSON.stringify(countries) !== '[]') {
     switch (countries[id].temperature) {
       case 'HOT' :
         return 'hot'
