@@ -62,14 +62,25 @@ const handleFocusCountryChange = (country) => {
         </MediaQuery>
 
         <MediaQuery maxWidth={799}>
-          <SmallMap countries={countries} region={region} onCountryHover={handleFocusCountryChange}/>
+          <Container className="p-3 legend-container">
+            <div className="legend-mobile">
+              <ul>
+                <li className="red">Scorching</li>
+                <li className="yellow">Warm</li>
+                <li className="green">Pleasant</li>
+                <li className="turquoise">Cool</li>
+                <li className="blue">Frigid</li>
+              </ul>
+            </div>
+            <SmallMap countries={countries} region={region} onCountryHover={handleFocusCountryChange}/>
+          </Container>
         </MediaQuery>
         <MediaQuery minWidth={800}>
           <WideMap countries={countries} region={region} onCountryHover={handleFocusCountryChange}/>
         </MediaQuery>
 
         <MediaQuery maxWidth={799}>
-          <ButtonGroup size="sm">
+          <ButtonGroup className="mb-2">
             <Button className={ month === 'JAN' ? "active" : "" } onClick={ () => handleMonthChange('JAN') }>Jan</Button>
             <Button className={ month === 'FEB' ? "active" : "" } onClick={ () => handleMonthChange('FEB') }>Feb</Button>
             <Button className={ month === 'MAR' ? "active" : "" } onClick={ () => handleMonthChange('MAR') }>Mar</Button>
@@ -78,7 +89,7 @@ const handleFocusCountryChange = (country) => {
             <Button className={ month === 'JUN' ? "active" : "" } onClick={ () => handleMonthChange('JUN') }>Jun</Button>
           </ButtonGroup>
           <sp/>
-          <ButtonGroup size="sm">
+          <ButtonGroup className="mb-2">
             <Button className={ month === 'JUL' ? "active" : "" } onClick={ () => handleMonthChange('JUL') }>Jul</Button>
             <Button className={ month === 'AUG' ? "active" : "" } onClick={ () => handleMonthChange('AUG') }>Aug</Button>
             <Button className={ month === 'SEP' ? "active" : "" } onClick={ () => handleMonthChange('SEP') }>Sep</Button>
