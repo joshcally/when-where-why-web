@@ -19,20 +19,18 @@
   background-color: #000000;
 }
 
-.card {
-  display: inline-block;
-  z-index: 1;
-  border: 1px solid #eee;
-  box-shadow: 0 2px 2px #ccc;
-  padding : 0px 20px;
-  margin: 5px 20px;
-  height: 200px;
+.card-body {
+
 }
 
 .card-title {
-  font-size: 2em;
+  font-size: 1.4em;
   font-weight: bold;
   padding-top: 5px;
+}
+
+.card-text {
+  font-size: 1em;
 }
 
 .legend {

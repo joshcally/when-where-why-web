@@ -2,6 +2,11 @@ import React, { useState } from "react";
 import './Home.css';
 import SmallMap from "../map/SmallMap.js";
 import WideMap from "../map/WideMap.js";
+import Footer from "./Footer.js"
+import Button from 'react-bootstrap/Button';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import Card from 'react-bootstrap/Card';
+import Container from 'react-bootstrap/Container';
 import useCountries from "../../hooks/useCountries";
 import MediaQuery from 'react-responsive'
 
@@ -26,49 +31,80 @@ const handleFocusCountryChange = (country) => {
 
   return (
     <div className="App">
+      <Container className="p-3">
 
-      <button className={`button ${region === 'EUROPE' ? "button-pressed" : ""}`} onClick={ () => handleRegionChange('EUROPE') }>Europe</button>
-      <button className={`button ${region === 'NORTH_AMERICA' ? "button-pressed" : ""}`} onClick={ () => handleRegionChange('NORTH_AMERICA') }>North America</button>
-      <button className={`button ${region === 'SOUTH_AMERICA' ? "button-pressed" : ""}`} onClick={ () => handleRegionChange('SOUTH_AMERICA') }>South America</button>
+      <h1>WHEN WHERE WHY</h1>
+      <h3>Travel Planning</h3>
 
-      <div className="card">
-        {(focusCountry === 'NOT_SET') && <div className="card-title">Select a region</div>}
-        {countries[focusCountry] && <div className="card-title">{countries[focusCountry].name} in {getFullMonthName(month)}</div>}
-        {countries[focusCountry] && <p>{countries[focusCountry].description}</p>}
-      </div>
+        <Button className={ region === 'EUROPE' ? "active" : "" } onClick={ () => handleRegionChange('EUROPE') }>Europe</Button>
+        <Button className={ region === 'NORTH_AMERICA' ? "active" : "" } onClick={ () => handleRegionChange('NORTH_AMERICA') }>North America</Button>
+        <Button className={ region === 'SOUTH_AMERICA' ? "active" : "" } onClick={ () => handleRegionChange('SOUTH_AMERICA') }>South America</Button>
 
-      <MediaQuery minWidth={800}>
-        <div className="legend">
-           <ul>
-             <li className="red">Scorching Hot</li>
-             <li className="yellow">Warm</li>
-             <li className="green">Pleasant</li>
-             <li className="turquoise">Cool</li>
-             <li className="blue">Freezing Cold</li>
-           </ul>
-        </div>
-      </MediaQuery>
+        <Card>
+          <Card.Body className="card-body">
 
-      <MediaQuery maxWidth={799}>
-        <SmallMap countries={countries} region={region} onCountryHover={handleFocusCountryChange}/>
-      </MediaQuery>
-      <MediaQuery minWidth={800}>
-        <WideMap countries={countries} region={region} onCountryHover={handleFocusCountryChange}/>
-      </MediaQuery>
+            {(focusCountry === 'NOT_SET') && <Card.Title className="card-title">Select a country</Card.Title>}
+            {countries[focusCountry] && <Card.Title className="card-title">{countries[focusCountry].name} in {getFullMonthName(month)}</Card.Title>}
+            {countries[focusCountry] && <Card.Text className="card-text">{countries[focusCountry].description}</Card.Text>}
+          </Card.Body>
+        </Card>
 
-      <button className={`button ${month === 'JAN' ? "button-pressed" : ""}`} onClick={ () => handleMonthChange('JAN') }>Jan</button>
-      <button className={`button ${month === 'FEB' ? "button-pressed" : ""}`} onClick={ () => handleMonthChange('FEB') }>Feb</button>
-      <button className={`button ${month === 'MAR' ? "button-pressed" : ""}`} onClick={ () => handleMonthChange('MAR') }>Mar</button>
-      <button className={`button ${month === 'APR' ? "button-pressed" : ""}`} onClick={ () => handleMonthChange('APR') }>Apr</button>
-      <button className={`button ${month === 'MAY' ? "button-pressed" : ""}`} onClick={ () => handleMonthChange('MAY') }>May</button>
-      <button className={`button ${month === 'JUN' ? "button-pressed" : ""}`} onClick={ () => handleMonthChange('JUN') }>Jun</button>
-      <button className={`button ${month === 'JUL' ? "button-pressed" : ""}`} onClick={ () => handleMonthChange('JUL') }>Jul</button>
-      <button className={`button ${month === 'AUG' ? "button-pressed" : ""}`} onClick={ () => handleMonthChange('AUG') }>Aug</button>
-      <button className={`button ${month === 'SEP' ? "button-pressed" : ""}`} onClick={ () => handleMonthChange('SEP') }>Sep</button>
-      <button className={`button ${month === 'OCT' ? "button-pressed" : ""}`} onClick={ () => handleMonthChange('OCT') }>Oct</button>
-      <button className={`button ${month === 'NOV' ? "button-pressed" : ""}`} onClick={ () => handleMonthChange('NOV') }>Nov</button>
-      <button className={`button ${month === 'DEC' ? "button-pressed" : ""}`} onClick={ () => handleMonthChange('DEC') }>Dec</button>
+        <MediaQuery minWidth={800}>
+          <div className="legend">
+             <ul>
+               <li className="red">Scorching Hot</li>
+               <li className="yellow">Warm</li>
+               <li className="green">Pleasant</li>
+               <li className="turquoise">Cool</li>
+               <li className="blue">Freezing Cold</li>
+             </ul>
+          </div>
+        </MediaQuery>
 
+        <MediaQuery maxWidth={799}>
+          <SmallMap countries={countries} region={region} onCountryHover={handleFocusCountryChange}/>
+        </MediaQuery>
+        <MediaQuery minWidth={800}>
+          <WideMap countries={countries} region={region} onCountryHover={handleFocusCountryChange}/>
+        </MediaQuery>
+
+        <MediaQuery maxWidth={799}>
+          <ButtonGroup size="sm">
+            <Button className={ month === 'JAN' ? "active" : "" } onClick={ () => handleMonthChange('JAN') }>Jan</Button>
+            <Button className={ month === 'FEB' ? "active" : "" } onClick={ () => handleMonthChange('FEB') }>Feb</Button>
+            <Button className={ month === 'MAR' ? "active" : "" } onClick={ () => handleMonthChange('MAR') }>Mar</Button>
+            <Button className={ month === 'APR' ? "active" : "" } onClick={ () => handleMonthChange('APR') }>Apr</Button>
+            <Button className={ month === 'MAY' ? "active" : "" } onClick={ () => handleMonthChange('MAY') }>May</Button>
+            <Button className={ month === 'JUN' ? "active" : "" } onClick={ () => handleMonthChange('JUN') }>Jun</Button>
+          </ButtonGroup>
+          <sp/>
+          <ButtonGroup size="sm">
+            <Button className={ month === 'JUL' ? "active" : "" } onClick={ () => handleMonthChange('JUL') }>Jul</Button>
+            <Button className={ month === 'AUG' ? "active" : "" } onClick={ () => handleMonthChange('AUG') }>Aug</Button>
+            <Button className={ month === 'SEP' ? "active" : "" } onClick={ () => handleMonthChange('SEP') }>Sep</Button>
+            <Button className={ month === 'OCT' ? "active" : "" } onClick={ () => handleMonthChange('OCT') }>Oct</Button>
+            <Button className={ month === 'NOV' ? "active" : "" } onClick={ () => handleMonthChange('NOV') }>Nov</Button>
+            <Button className={ month === 'DEC' ? "active" : "" } onClick={ () => handleMonthChange('DEC') }>Dec</Button>
+          </ButtonGroup>
+        </MediaQuery>
+        <MediaQuery minWidth={800}>
+          <ButtonGroup className="mb-2">
+            <Button className={ month === 'JAN' ? "active" : "" } onClick={ () => handleMonthChange('JAN') }>Jan</Button>
+            <Button className={ month === 'FEB' ? "active" : "" } onClick={ () => handleMonthChange('FEB') }>Feb</Button>
+            <Button className={ month === 'MAR' ? "active" : "" } onClick={ () => handleMonthChange('MAR') }>Mar</Button>
+            <Button className={ month === 'APR' ? "active" : "" } onClick={ () => handleMonthChange('APR') }>Apr</Button>
+            <Button className={ month === 'MAY' ? "active" : "" } onClick={ () => handleMonthChange('MAY') }>May</Button>
+            <Button className={ month === 'JUN' ? "active" : "" } onClick={ () => handleMonthChange('JUN') }>Jun</Button>
+            <Button className={ month === 'JUL' ? "active" : "" } onClick={ () => handleMonthChange('JUL') }>Jul</Button>
+            <Button className={ month === 'AUG' ? "active" : "" } onClick={ () => handleMonthChange('AUG') }>Aug</Button>
+            <Button className={ month === 'SEP' ? "active" : "" } onClick={ () => handleMonthChange('SEP') }>Sep</Button>
+            <Button className={ month === 'OCT' ? "active" : "" } onClick={ () => handleMonthChange('OCT') }>Oct</Button>
+            <Button className={ month === 'NOV' ? "active" : "" } onClick={ () => handleMonthChange('NOV') }>Nov</Button>
+            <Button className={ month === 'DEC' ? "active" : "" } onClick={ () => handleMonthChange('DEC') }>Dec</Button>
+          </ButtonGroup>
+         </MediaQuery>
+      </Container>
+      <Footer/>
     </div>
   );
 }
