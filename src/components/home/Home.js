@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import './Home.css';
 import SmallMap from "../map/SmallMap.js";
+import Legend from "./Legend.js";
 import WideMap from "../map/WideMap.js";
-import Footer from "./Footer.js"
+import Header from "./Header.js";
+import Footer from "./Footer.js";
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Card from 'react-bootstrap/Card';
@@ -31,7 +33,8 @@ const handleFocusCountryChange = (country) => {
 
   return (
     <div className="App">
-      <Container className="p-3">
+    <Header />
+      <Container>
 
       <h1>WHEN WHERE WHY</h1>
       <h3>Travel Planning</h3>
@@ -43,39 +46,20 @@ const handleFocusCountryChange = (country) => {
         <Card>
           <Card.Body className="card-body">
 
-            {(focusCountry === 'NOT_SET') && <Card.Title className="card-title">Select a country</Card.Title>}
+            {(focusCountry === 'NOT_SET') && <Card.Title className="card-title">Select a country to get started</Card.Title>}
             {countries[focusCountry] && <Card.Title className="card-title">{countries[focusCountry].name} in {getFullMonthName(month)}</Card.Title>}
             {countries[focusCountry] && <Card.Text className="card-text">{countries[focusCountry].description}</Card.Text>}
           </Card.Body>
         </Card>
 
-        <MediaQuery minWidth={800}>
-          <div className="legend">
-             <ul>
-               <li className="red">Scorching Hot</li>
-               <li className="yellow">Warm</li>
-               <li className="green">Pleasant</li>
-               <li className="turquoise">Cool</li>
-               <li className="blue">Freezing Cold</li>
-             </ul>
-          </div>
-        </MediaQuery>
-
         <MediaQuery maxWidth={799}>
           <Container className="p-3 legend-container">
-            <div className="legend-mobile">
-              <ul>
-                <li className="red">Scorching</li>
-                <li className="yellow">Warm</li>
-                <li className="green">Pleasant</li>
-                <li className="turquoise">Cool</li>
-                <li className="blue">Frigid</li>
-              </ul>
-            </div>
+            <Legend />
             <SmallMap countries={countries} region={region} onCountryHover={handleFocusCountryChange}/>
           </Container>
         </MediaQuery>
         <MediaQuery minWidth={800}>
+          <Legend />
           <WideMap countries={countries} region={region} onCountryHover={handleFocusCountryChange}/>
         </MediaQuery>
 
@@ -88,7 +72,7 @@ const handleFocusCountryChange = (country) => {
             <Button className={ month === 'MAY' ? "active" : "" } onClick={ () => handleMonthChange('MAY') }>May</Button>
             <Button className={ month === 'JUN' ? "active" : "" } onClick={ () => handleMonthChange('JUN') }>Jun</Button>
           </ButtonGroup>
-          <sp/>
+          <span />
           <ButtonGroup className="mb-2">
             <Button className={ month === 'JUL' ? "active" : "" } onClick={ () => handleMonthChange('JUL') }>Jul</Button>
             <Button className={ month === 'AUG' ? "active" : "" } onClick={ () => handleMonthChange('AUG') }>Aug</Button>

@@ -3,7 +3,7 @@ import Papa from "papaparse"
 import Jan from '../assets/jan.csv';
 import Feb from '../assets/feb.csv';
 import Mar from '../assets/mar.csv';
-import Apr from '../assets/apr.csv';
+import Apr from '../assets/apr2.csv';
 import May from '../assets/may.csv';
 import Jun from '../assets/jun.csv';
 import Jul from '../assets/jul.csv';
@@ -32,6 +32,8 @@ export default function useCountries(region, month) {
         console.log('Filepath: ' + filepath);
         Papa.parse(filepath, {
           download: true,
+          delimiter: ',',
+          newline: '\n',
           header: true,
           complete: result => {
             console.log('GOT HERE');

@@ -43,6 +43,7 @@
   padding : 20px;
   margin: 20px;
   text-align: left;
+  pointer-events:none;
 }
 
 .legend-container {
@@ -58,6 +59,7 @@
   padding : 20px;
   text-align: left;
   font-size: 12px;
+  pointer-events:none;
 }
 
 ul li::before {
