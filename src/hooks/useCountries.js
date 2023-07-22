@@ -1,17 +1,17 @@
 import { useState, useEffect } from "react";
 import Papa from "papaparse"
-//import Jan from '../assets/jan.csv';
-//import Feb from '../assets/feb.csv';
-//import Mar from '../assets/mar.csv';
-//import Apr from '%PUBLIC_URL%/apr.csv';
-//import May from '../assets/may.csv';
-//import Jun from '../assets/jun.csv';
-//import Jul from '../assets/jul.csv';
-//import Aug from '../assets/aug.csv';
-//import Sep from '../assets/sep.csv';
-//import Oct from '../assets/oct.csv';
-//import Nov from '../assets/nov.csv';
-//import Dec from '../assets/dec.csv';
+import Jan from '../assets/jan.csv';
+import Feb from '../assets/feb.csv';
+import Mar from '../assets/mar.csv';
+import Apr from '../assets/apr.csv';
+import May from '../assets/may.csv';
+import Jun from '../assets/jun.csv';
+import Jul from '../assets/jul.csv';
+import Aug from '../assets/aug.csv';
+import Sep from '../assets/sep.csv';
+import Oct from '../assets/oct.csv';
+import Nov from '../assets/nov.csv';
+import Dec from '../assets/dec.csv';
 
 
 export default function useCountries(region, month) {
@@ -26,7 +26,7 @@ export default function useCountries(region, month) {
 
 //        let filepath = encodeURI('assets/' + month.toLowerCase() + '.csv');
 
-        let filepath = encodeURI(process.env.PUBLIC_URL + '/csv/' + month.toLowerCase() + '.csv');
+        let filepath = encodeURI(getCountryCsv(month));
 
         console.log("Current directory:", __dirname);
         console.log('Filepath: ' + filepath);
@@ -52,46 +52,46 @@ export default function useCountries(region, month) {
       };
   }, [region, month]);
 
-//  function getCountryCsv(month) {
-//    switch (month) {
-//      case 'JAN': {
-//        return Jan;
-//      }
-//      case 'FEB': {
-//        return Feb;
-//      }
-//      case 'MAR': {
-//        return Mar;
-//      }
-//      case 'APR': {
-//        return Apr;
-//      }
-//      case 'MAY': {
-//        return May;
-//      }
-//      case 'JUN': {
-//        return Jun;
-//      }
-//      case 'JUL': {
-//        return Jul;
-//      }
-//      case 'AUG': {
-//        return Aug;
-//      }
-//      case 'SEP': {
-//        return Sep;
-//      }
-//      case 'OCT': {
-//        return Oct;
-//      }
-//      case 'NOV': {
-//        return Nov;
-//      }
-//      case 'DEC': {
-//        return Dec;
-//      }
-//    }
-//  }
+  function getCountryCsv(month) {
+    switch (month) {
+      case 'JAN': {
+        return Jan;
+      }
+      case 'FEB': {
+        return Feb;
+      }
+      case 'MAR': {
+        return Mar;
+      }
+      case 'APR': {
+        return Apr;
+      }
+      case 'MAY': {
+        return May;
+      }
+      case 'JUN': {
+        return Jun;
+      }
+      case 'JUL': {
+        return Jul;
+      }
+      case 'AUG': {
+        return Aug;
+      }
+      case 'SEP': {
+        return Sep;
+      }
+      case 'OCT': {
+        return Oct;
+      }
+      case 'NOV': {
+        return Nov;
+      }
+      case 'DEC': {
+        return Dec;
+      }
+    }
+  }
 
   function fetchAndCacheCountries(region, month) {
     switch (month) {
