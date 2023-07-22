@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import Papa from "papaparse"
 import Jan from '../assets/jan.csv';
 import Feb from '../assets/feb.csv';
 import Mar from '../assets/mar.csv';
@@ -12,7 +11,6 @@ import Sep from '../assets/sep.csv';
 import Oct from '../assets/oct.csv';
 import Nov from '../assets/nov.csv';
 import Dec from '../assets/dec.csv';
-import Notes from '../data.csv';
 
 
 export default function useCountries(region, month) {
@@ -20,41 +18,8 @@ export default function useCountries(region, month) {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-
-    fetch( Nov )
-        .then( response => console.log(response.text()) );
-//      try {
-
-//        setLoading(true);
-//
-////        let filepath = encodeURI('assets/' + month.toLowerCase() + '.csv');
-//
-//        let filepath = encodeURI(getCountryCsv(month));
-
-        console.log("Current directory:", __dirname);
-//        console.log('Filepath: ' + filepath);
-        console.log('File: ' + JSON.stringify(Nov));
-        console.log(Notes);
-//        Papa.parse(filepath, {
-//          download: true,
-//          delimiter: ',',
-//          newline: '\n',
-//          header: true,
-//          complete: result => {
-//            console.log('GOT HERE');
-//            let dictionary = Object.fromEntries(result.data.map(x => [x.code, { 'name': x.name, 'temperature': x.temperature, 'precipitation': x.precipitation, 'summary': x.summary, 'description': x.description }]));
-//            //console.log('result' + JSON.stringify(result));
-//            //console.log('dictionary' + JSON.stringify(dictionary));
-//            setResults(dictionary);
-//            setLoading(false);
-//          }
-//        });
-
-
-//      } catch (err) {
-//        console.warn(err);
-//        setLoading(false);
-//      };
+    let dictionary = Object.fromEntries(getCountryCsv(month).map(x => [x.code, { 'name': x.name, 'temperature': x.temperature, 'precipitation': x.precipitation, 'summary': x.summary, 'description': x.description }]));
+    setResults(dictionary);
   }, [region, month]);
 
   function getCountryCsv(month) {
