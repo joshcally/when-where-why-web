@@ -9,8 +9,9 @@ import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
-import useCountries from "../../hooks/useCountries";
 import MediaQuery from 'react-responsive'
+
+import useCountries from "../../hooks/useCountries";
 
 function Home() {
 
@@ -33,22 +34,22 @@ const handleFocusCountryChange = (country) => {
 
   return (
     <div className="App">
-    <Header />
       <Container>
 
-      <h1>WHEN WHERE WHY</h1>
-      <h3>Travel Planning</h3>
+        <h1>WHEN WHERE WHY</h1>
+        <h3>Travel Planning</h3>
 
-        <Button className={ region === 'EUROPE' ? "active" : "" } onClick={ () => handleRegionChange('EUROPE') }>Europe</Button>
-        <Button className={ region === 'NORTH_AMERICA' ? "active" : "" } onClick={ () => handleRegionChange('NORTH_AMERICA') }>North America</Button>
-        <Button className={ region === 'SOUTH_AMERICA' ? "active" : "" } onClick={ () => handleRegionChange('SOUTH_AMERICA') }>South America</Button>
+        <div className="region-button-group">
+          <Button className={ region === 'EUROPE' ? "active" : "" } onClick={ () => handleRegionChange('EUROPE') }>Europe</Button>{' '}
+          <Button className={ region === 'NORTH_AMERICA' ? "active" : "" } onClick={ () => handleRegionChange('NORTH_AMERICA') }>North America</Button>{' '}
+          <Button className={ region === 'SOUTH_AMERICA' ? "active" : "" } onClick={ () => handleRegionChange('SOUTH_AMERICA') }>South America</Button>
+        </div>
 
-        <Card>
-          <Card.Body className="card-body">
-
-            {(focusCountry === 'NOT_SET') && <Card.Title className="card-title">Select a country to get started</Card.Title>}
-            {countries[focusCountry] && <Card.Title className="card-title">{countries[focusCountry].name} in {getFullMonthName(month)}</Card.Title>}
-            {countries[focusCountry] && <Card.Text className="card-text">{countries[focusCountry].description}</Card.Text>}
+        <Card className="country-summary">
+          <Card.Body>
+            {(focusCountry === 'NOT_SET') && <Card.Title>Select a country to get started</Card.Title>}
+            {countries[focusCountry] && <Card.Title>{countries[focusCountry].name} in {getFullMonthName(month)}</Card.Title>}
+            {countries[focusCountry] && <Card.Text>{countries[focusCountry].description}</Card.Text>}
           </Card.Body>
         </Card>
 
@@ -98,6 +99,7 @@ const handleFocusCountryChange = (country) => {
             <Button className={ month === 'DEC' ? "active" : "" } onClick={ () => handleMonthChange('DEC') }>Dec</Button>
           </ButtonGroup>
          </MediaQuery>
+
       </Container>
       <Footer/>
     </div>
