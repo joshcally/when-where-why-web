@@ -35,22 +35,22 @@ const handleFocusCountryChange = (country) => {
 
   return (
     <div className="App">
+      <Header/>
       <Container>
 
-        <h1>WHEN WHERE WHY</h1>
-        <h3>Travel Planning</h3>
-
+        {/*
         <div className="region-button-group">
           <Button className={ region === 'EUROPE' ? "active" : "" } onClick={ () => handleRegionChange('EUROPE') }>Europe</Button>{' '}
           <Button className={ region === 'NORTH_AMERICA' ? "active" : "" } onClick={ () => handleRegionChange('NORTH_AMERICA') }>North America</Button>{' '}
           <Button className={ region === 'SOUTH_AMERICA' ? "active" : "" } onClick={ () => handleRegionChange('SOUTH_AMERICA') }>South America</Button>
         </div>
+        */} 
 
         <Card className="country-summary">
           <Card.Body>
-            {(focusCountry === 'NOT_SET') && <Card.Title>Select a country to get started</Card.Title>}
-            {countries[focusCountry] && <Card.Title>{countries[focusCountry].name} in {getFullMonthName(month)}</Card.Title>}
-            {countries[focusCountry] && <Card.Text className='card-text'><AutoTextSize mode='box'>{countries[focusCountry].description}</AutoTextSize></Card.Text>}
+            {region === 'EUROPE' && focusCountry === 'NOT_SET' && <Card.Title>Select a country to get started</Card.Title>}
+            {region === 'EUROPE' && countries[focusCountry] && <Card.Title>{countries[focusCountry].name} in {getFullMonthName(month)}</Card.Title>}
+            {region === 'EUROPE' && countries[focusCountry] && <Card.Text className='card-text'><AutoTextSize mode='box'>{countries[focusCountry].description}</AutoTextSize></Card.Text>}
           </Card.Body>
         </Card>
 
@@ -66,7 +66,7 @@ const handleFocusCountryChange = (country) => {
         </MediaQuery>
 
         <MediaQuery maxWidth={799}>
-          <ButtonGroup className="mb-2">
+          <ButtonGroup className="mb-2 month-buttons">
             <Button className={ month === 'JAN' ? "active" : "" } onClick={ () => handleMonthChange('JAN') }>Jan</Button>
             <Button className={ month === 'FEB' ? "active" : "" } onClick={ () => handleMonthChange('FEB') }>Feb</Button>
             <Button className={ month === 'MAR' ? "active" : "" } onClick={ () => handleMonthChange('MAR') }>Mar</Button>

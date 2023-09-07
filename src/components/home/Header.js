@@ -7,11 +7,18 @@ import Container from 'react-bootstrap/Container';
 function Header() {
 
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="dark" data-bs-theme="dark">
       <Container>
-        <Navbar.Brand href="#home">When Where Why</Navbar.Brand>
-        <Nav.Link href="#home">Maps</Nav.Link>
-        <Nav.Link href="#home">About</Nav.Link>
+        <Navbar.Brand style={{color: "white"}} href="#home">
+          <img
+           alt=""
+           src="/logo192.png"
+           width="30"
+           height="30"
+           className="d-inline-block align-top"
+          />{' '}
+          When Where Why
+        </Navbar.Brand>
       </Container>
     </Navbar>
   );

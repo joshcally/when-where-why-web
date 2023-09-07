@@ -2,8 +2,8 @@
   text-align: center;
 }
 
-.region-button {
-  margin: 0 2px;
+.region-button-group {
+  margin: 4px 0;
 }
 
 .country-summary {
@@ -52,6 +52,11 @@
   text-align: left;
   font-size: 12px;
   pointer-events:none;
+}
+
+.month-buttons {
+  margin-top: -14px;
+  margin-bottom: 5px !important;
 }
 
 ul li::before {
