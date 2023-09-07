@@ -1,7 +1,6 @@
 import './WideMap.css';
 
 function NorthAmerica({ countries, onCountryHover }) {
-const setCountryHover = country => onCountryHover(country);
 
   return (
     <div>
@@ -25,26 +24,6 @@ const setCountryHover = country => onCountryHover(country);
       </svg>
     </div>
   );
-}
-
-function getColorType(countries, id) {
-  if (typeof(countries) !== undefined && JSON.stringify(countries) !== '[]') {
-    switch (countries[id]['weather']) {
-      case 'PERFECT' :
-        return 'perfect'
-      case 'WARM' :
-        return 'warm'
-      case 'HOT' :
-        return 'hot'
-      case 'CHILLY' :
-        return 'chilly'
-      case 'COLD' :
-        return 'cold'
-    }
-  }
-  else {
-    return '';
-  }
 }
 
 export default NorthAmerica;

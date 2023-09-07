@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useState } from "react";
 import './Home.css';
 import SmallMap from "../map/SmallMap.js";
 import Legend from "./Legend.js";
@@ -16,10 +16,10 @@ import useCountries from "../../hooks/useCountries";
 
 function Home() {
 
-const [month, setMonth] = useState('JUN');
+const [month, setMonth] = useState('AUG');
 const [region, setRegion] = useState('EUROPE');
 const [focusCountry, setFocusCountry] = useState('NOT_SET');
-const { loading, results: countries } = useCountries(region, month);
+const { results: countries } = useCountries(region, month);
 
 const handleRegionChange = (region) => {
   setRegion(region)
@@ -48,9 +48,10 @@ const handleFocusCountryChange = (country) => {
 
         <Card className="country-summary">
           <Card.Body>
-            {region === 'EUROPE' && focusCountry === 'NOT_SET' && <Card.Title>Select a country to get started</Card.Title>}
-            {region === 'EUROPE' && countries[focusCountry] && <Card.Title>{countries[focusCountry].name} in {getFullMonthName(month)}</Card.Title>}
-            {region === 'EUROPE' && countries[focusCountry] && <Card.Text className='card-text'><AutoTextSize mode='box'>{countries[focusCountry].description}</AutoTextSize></Card.Text>}
+            {(focusCountry === 'NOT_SET') && <Card.Title>Trip Planning Starts Here</Card.Title>}
+            {(focusCountry === 'NOT_SET') && <Card.Text className='card-text'>Select a country to get started</Card.Text>}
+            {countries[focusCountry] && <Card.Title>{countries[focusCountry].name} in {getFullMonthName(month)}</Card.Title>}
+            {countries[focusCountry] && <Card.Text className='card-text'><AutoTextSize mode='box'>{countries[focusCountry].description}</AutoTextSize></Card.Text>}
           </Card.Body>
         </Card>
 
@@ -102,7 +103,6 @@ const handleFocusCountryChange = (country) => {
          </MediaQuery>
 
       </Container>
-      <Footer/>
     </div>
   );
 }
