@@ -1,6 +1,6 @@
 name,code,temperature,precipitation,summary,description
 Afghanistan,AFG,,,,
-Albania,ALB,,,,
+Albania,ALB,WARM,,,"Summer has arrived and with it comes hot, sunny weather and a full festival schedule. This is a great time for sunning yourself on the beach before the school-holiday hordes descend and prices peak."
 Algeria,DZA,,,,
 American Samoa,ASM,,,,
 Andorra,AND,,,,
@@ -18,14 +18,14 @@ Bahamas,BHS,,,,
 Bahrain,BHR,,,,
 Bangladesh,BGD,,,,
 Barbados,BRB,,,,
-Belarus,BLR,,,,
+Belarus,BLR,MILD,,,
 Belgium,BEL,MILD,,,"A great travelling month with long, long days and mild weather."
 Belize,BLZ,,,,
 Benin,BEN,,,,
 Bermuda,BMU,,,,
 Bhutan,BTN,,,,
 Bolivia,BOL,,,,
-Bosnia and Herzegovina,BIH,,,,
+Bosnia & Herzegovina,BIH,MILD,,,"Summer has arrived and with it comes hot, sunny weather and a full festival schedule."
 Botswana,BWA,,,,
 Brazil,BRA,,,,
 British Virgin Islands,VGB,,,,
@@ -79,7 +79,7 @@ Georgia,GEO,MILD,,,"One of the best months to visit. Temperatures get up to 30°
 Germany,DEU,MILD,,,"Germany's festival pace quickens, while gourmets can rejoice in the bounty of fresh, local produce in the markets. Life moves outdoors as the summer solstice means the sun doesn't set until around 9.30pm."
 Ghana,GHA,,,,
 Gibraltar,GIB,,,,
-Greece,GRC,MILD,,,"For festival-goers looking for contemporary acts rather than traditional village parties, June is hopping on the mainland. Top national and international performers fill atmospheric stages with dance, music and drama."
+Greece,GRC,WARM,,,"For festival-goers looking for contemporary acts rather than traditional village parties, June is hopping on the mainland. Top national and international performers fill atmospheric stages with dance, music and drama."
 Greenland,GRL,,,,
 Grenada,GRD,,,,
 Guadeloupe,GLP,,,,
@@ -110,6 +110,7 @@ Jordan,JOR,,,,
 Kazakhstan,KAZ,,,,
 Kenya,KEN,,,,
 Kiribati,KIR,,,,
+Kosovo,KOS,MILD,,,"Summer has arrived and with it comes hot, sunny weather and a full festival schedule."
 Kuwait,KWT,,,,
 Kyrgyzstan,KGZ,,,,
 Laos,LAO,,,,
@@ -122,7 +123,7 @@ Liechtenstein,LIE,,,,
 Lithuania,LTU,MILD,,,"After several fits and bursts of spring sun, the warm weather is finally here to stay. The region-wide Midsummer's Eve festivities herald the peak of the summer season."
 Luxembourg,LUX,MILD,,,
 Macao,MAC,,,,
-Macedonia,MKD,,,,
+Macedonia,MKD,MILD,,,"Summer has arrived and with it comes hot, sunny weather and a full festival schedule."
 Madagascar,MDG,,,,
 Malawi,MWI,,,,
 Malaysia,MYS,,,,
@@ -136,10 +137,10 @@ Mauritius,MUS,,,,
 Mayotte,MYT,,,,
 Mexico,MEX,,,,
 Micronesia,FSM,,,,
-Moldova,MDA,,,,
+Moldova,MDA,MILD,,,
 Monaco,MCO,,,,
 Mongolia,MNG,,,,
-Montenegro,MNE,,,,
+Montenegro,MNE,WARM,,,"Summer has arrived and with it comes hot, sunny weather and a full festival schedule. This is a great time for sunning yourself on the beach before the school-holiday hordes descend and prices peak."
 Montserrat,MSR,,,,
 Morocco,MAR,,,,
 Mozambique,MOZ,,,,
@@ -185,11 +186,11 @@ San Marino,SMR,,,,
 Sao Tome and Principe,STP,,,,
 Saudi Arabia,SAU,,,,
 Senegal,SEN,,,,
-Serbia,SRB,,,,
+Serbia,SRB,MILD,,,"Summer has arrived and with it comes hot, sunny weather and a full festival schedule."
 Seychelles,SYC,,,,
 Sierra Leone,SLE,,,,
 Singapore,SGP,,,,
-Slovakia,SVK,,,,
+Slovakia,SVK,MILD,,,
 Slovenia,SVN,MILD,,,"June can be gloriously sunny or occasionally rainy. It's the best month for white-water rafting, as rivers swell after the spring thaw and temps warm up enough to make the idea palatable."
 Solomon Islands,SLB,,,,
 Somalia,SOM,,,,
