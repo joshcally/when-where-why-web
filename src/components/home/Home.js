@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import './Home.css';
 import SmallMap from "../map/SmallMap.js";
 import Legend from "./Legend.js";
 import WideMap from "../map/WideMap.js";
 import Header from "./Header.js";
+import FittedText from "./FittedText.js";
 import Footer from "./Footer.js";
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
@@ -49,12 +50,12 @@ const handleFocusCountryChange = (country) => {
           <Card.Body>
             {(focusCountry === 'NOT_SET') && <Card.Title>Select a country to get started</Card.Title>}
             {countries[focusCountry] && <Card.Title>{countries[focusCountry].name} in {getFullMonthName(month)}</Card.Title>}
-            {countries[focusCountry] && <Card.Text>{countries[focusCountry].description}</Card.Text>}
+            {countries[focusCountry] && <FittedText description={countries[focusCountry].description} />}
           </Card.Body>
         </Card>
 
         <MediaQuery maxWidth={799}>
-          <Container className="p-3 legend-container">
+          <Container className="legend-container">
             <Legend />
             <SmallMap countries={countries} region={region} onCountryHover={handleFocusCountryChange}/>
           </Container>
