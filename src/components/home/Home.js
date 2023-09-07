@@ -4,13 +4,13 @@ import SmallMap from "../map/SmallMap.js";
 import Legend from "./Legend.js";
 import WideMap from "../map/WideMap.js";
 import Header from "./Header.js";
-import FittedText from "./FittedText.js";
 import Footer from "./Footer.js";
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import MediaQuery from 'react-responsive'
+import { AutoTextSize } from 'auto-text-size'
 
 import useCountries from "../../hooks/useCountries";
 
@@ -50,7 +50,7 @@ const handleFocusCountryChange = (country) => {
           <Card.Body>
             {(focusCountry === 'NOT_SET') && <Card.Title>Select a country to get started</Card.Title>}
             {countries[focusCountry] && <Card.Title>{countries[focusCountry].name} in {getFullMonthName(month)}</Card.Title>}
-            {countries[focusCountry] && <FittedText description={countries[focusCountry].description} />}
+            {countries[focusCountry] && <Card.Text className='card-text'><AutoTextSize mode='box'>{countries[focusCountry].description}</AutoTextSize></Card.Text>}
           </Card.Body>
         </Card>
 
