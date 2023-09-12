@@ -1,5 +1,5 @@
 import React from "react";
-import './Home.css';
+import './Legend.css';
 import MediaQuery from 'react-responsive'
 
 function Legend() {
@@ -10,11 +10,11 @@ function Legend() {
       <MediaQuery minWidth={800}>
         <div className="legend">
            <ul>
-             <li className="red">Scorching Hot</li>
+             <li className="red">Scorching</li>
              <li className="yellow">Warm</li>
              <li className="green">Pleasant</li>
              <li className="turquoise">Cool</li>
-             <li className="blue">Freezing Cold</li>
+             <li className="blue">Frigid</li>
            </ul>
         </div>
       </MediaQuery>

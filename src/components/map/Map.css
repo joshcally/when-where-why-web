@@ -22,6 +22,12 @@
   fill: #2d89d6;
 }
 
+.focus-region {
+  stroke: black;
+    stroke-width: 2px;
+    filter: brightness(0.95);
+}
+
 .map-wrapper {
   display: inline-block;
   margin: 0 auto;
@@ -30,10 +36,4 @@
   position: relative;
 }
 
-.region:hover {
-  stroke: black;
-  stroke-width: 2px;
-  transition: stroke-width 0.4s, filter 0.4s;
-  filter: brightness(0.75);
-}
 
