@@ -13,13 +13,22 @@ import Nov from '../assets/nov.csv';
 import Dec from '../assets/dec.csv';
 
 
-export default function useCountries(region, month) {
+export default function useCountries(month) {
   const [results, setResults] = useState([]);
 
   useEffect(() => {
-    let dictionary = Object.fromEntries(getCountryCsv(month).map(x => [x.code, { 'name': x.name, 'temperature': x.temperature, 'precipitation': x.precipitation, 'summary': x.summary, 'description': x.description }]));
+    let dictionary = Object.fromEntries(
+          getCountryCsv(month).map(
+                x => [x.code,
+                      {
+                          'name': x.name,
+                          'temperature': x.temperature,
+                          'precipitation': x.precipitation,
+                          'summary': x.summary,
+                          'description': x.description
+                      }]));
     setResults(dictionary);
-  }, [region, month]);
+  }, [month]);
 
   function getCountryCsv(month) {
     switch (month) {

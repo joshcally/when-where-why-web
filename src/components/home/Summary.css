@@ -4,6 +4,8 @@
 
 .card-text {
   height: 100px;
+  margin: 15px;
+  display: block !important;
 }
 
 .card-title {
@@ -14,4 +16,11 @@
 .country-summary {
   margin: 8px 8px 4px 8px;
   box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+  max-width: 600px;
+}
+
+@media (min-width: 446px) {
+  .country-summary {
+    min-width: 400px;
+  }
 }

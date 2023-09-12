@@ -1,18 +1,11 @@
-.legend {
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  border: 1px solid #eee;
-  box-shadow: 0 2px 2px #ccc;
-  padding : 20px;
-  margin: 20px;
-  text-align: left;
-  pointer-events:none;
+@media (min-width: 992px) {
+  .legend {
+    margin: 20px;
+    margin-right: 200px;
+  }
 }
 
-.legend-mobile {
+.legend {
   display: inline-block;
   position: absolute;
   top: 0;

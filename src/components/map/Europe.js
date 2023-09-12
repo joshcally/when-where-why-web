@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import './Map.css';
 import getColorType from './ColorTypeMapper.js';
 
-function EuropeMobile({ countries, onCountryClick }) {
+function Europe({ countries, onCountryClick }) {
 
 const [focusRegion, setFocusRegion] = useState('NOT_SET');
 const handleRegionChange = (region) => {
@@ -61,4 +61,4 @@ const handleRegionChange = (region) => {
   );
 }
 
-export default EuropeMobile;
+export default Europe;

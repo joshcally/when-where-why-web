@@ -8,7 +8,7 @@ function MonthButtonGroup({month, onMonthChange}) {
 
   return (
   <div>
-    <MediaQuery maxWidth={799}>
+    <MediaQuery maxWidth={767}>
       <ButtonGroup className="mb-2 month-buttons">
         <Button className={ month === 'JAN' ? "active" : "" } onClick={ () => onMonthChange('JAN') }>Jan</Button>
         <Button className={ month === 'FEB' ? "active" : "" } onClick={ () => onMonthChange('FEB') }>Feb</Button>
@@ -27,8 +27,8 @@ function MonthButtonGroup({month, onMonthChange}) {
         <Button className={ month === 'DEC' ? "active" : "" } onClick={ () => onMonthChange('DEC') }>Dec</Button>
       </ButtonGroup>
     </MediaQuery>
-    <MediaQuery minWidth={800}>
-      <ButtonGroup className="mb-2">
+    <MediaQuery minWidth={768}>
+      <ButtonGroup className="mb-2 month-buttons">
         <Button className={ month === 'JAN' ? "active" : "" } onClick={ () => onMonthChange('JAN') }>Jan</Button>
         <Button className={ month === 'FEB' ? "active" : "" } onClick={ () => onMonthChange('FEB') }>Feb</Button>
         <Button className={ month === 'MAR' ? "active" : "" } onClick={ () => onMonthChange('MAR') }>Mar</Button>
