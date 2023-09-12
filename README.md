@@ -1,5 +1,7 @@
 # When Where Why
-###Travel Planning Starts Here
+
+### Travel Planning Starts Here
+
 WhenWhereWhy.io is a data visualization tool that helps travelers research destinations based upon the ideal season to visit.
 
 ## Available Scripts
