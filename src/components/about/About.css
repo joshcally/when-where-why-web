@@ -1,0 +1,104 @@
+.background {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-attachment: fixed;
+    background-image: url('../../bg.jpg');
+}
+
+.backgrounds {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    z-index: -1;
+}
+
+.custom-card {
+  background: ghostwhite;
+  display: flex;
+  margin: 40px 0;
+  border-radius: 10px;
+}
+
+.custom-card-content {
+  flex-direction: column;
+  padding: 20px;
+}
+
+.description {
+
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    color: #FFF;
+    text-align: center;
+}
+
+.hero-center {
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+}
+
+.hero-image-left {
+  width: 20em;
+  border-radius: 10px 0 0 10px;
+}
+
+.hero-image-right {
+  width: 20em;
+  border-radius: 0 10px 10px 0;
+}
+
+.hero-logo {
+    font-family: DinCondensed;
+    font-size: 64px;
+    margin: 80px 0 40px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.custom-map-wrapper {
+  justify-content: center;
+}
+
+.overlay:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: #3F51B5;
+    opacity: 0.8;
+}
+
+bees-keys-icon {
+  width: 170px;
+  height: 170px;
+  border-radius: 22%;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+bees-keys-link {
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 13px;
+  width: 250px;
+  height: 83px;
+}
